@@ -17,7 +17,7 @@ class Student{
 public class Main {
     public static void main(String[] args){
         
-    // Using Default Constructor
+    // Using Default Constructor . if we define any constructor then default constructor is not provided by java and we can't use it without define it.
         Student s1 = new Student();
         System.out.println("Default Constructor:");
         System.out.println("Name: " + s1.name); // null
