@@ -21,7 +21,13 @@ class Student{
         System.out.println("Local id: " + id); //acess local variable and prints 10
         System.out.println("Instance id: " + this.id); //access instance variable and prints 20
 
-
+        if(balance > 1000){
+            double interest = balance * 0.05; // **Scope of interest variable is only within this if block**
+            System.out.println("Interest: " + interest);
+        } else {
+            double interest = balance * 0.03; // **Scope of interest variable is only within this else block**
+            System.out.println("Interest: " + interest);
+        }
 
     }
 }
