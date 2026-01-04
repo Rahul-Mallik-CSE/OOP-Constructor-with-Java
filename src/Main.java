@@ -1,7 +1,7 @@
 
 class Student{
     String name;
-    int age;
+    int id;
     // If we don't write any constructor, Java provides a default No-Argument Constructor. That will be shown below: 
     public Student(){
         //empty body for default constructor
@@ -10,7 +10,19 @@ class Student{
     //Parameterized Constructor
     public Student(String n, int a){
         name= n;
-        age= a;
+        id= a;
+    }
+
+
+    public void calculateInterest(double balance){
+        int id = 10; //this is local variable
+        this.id = 20; // this.id refers to instance variable
+
+        System.out.println("Local id: " + id); //acess local variable and prints 10
+        System.out.println("Instance id: " + this.id); //access instance variable and prints 20
+
+
+
     }
 }
 
@@ -21,13 +33,13 @@ public class Main {
         Student s1 = new Student();
         System.out.println("Default Constructor:");
         System.out.println("Name: " + s1.name); // null
-        System.out.println("Age: " + s1.age);   // 0
+        System.out.println("Id: " + s1.id);   // 0
 
         
         // Using Parameterized Constructor
         Student s2 = new Student("Alice", 20);
         System.out.println("Parameterized Constructor:");
         System.out.println("Name: " + s2.name); // Alice
-        System.out.println("Age: " + s2.age);   // 20
+        System.out.println("Id: " + s2.id);   // 20
     }
 }
